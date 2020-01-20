@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AppHeader = props => {
@@ -12,7 +12,7 @@ const AppHeader = props => {
 };
 
 AppHeader.propTypes = {
-    title:PropTypes.string,
+    title: PropTypes.string.isRequired,
 };
 
 export default AppHeader;

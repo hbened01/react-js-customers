@@ -6,6 +6,7 @@ import CustomersActions from './../components/CustomersActions';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchCustomers } from '../actions/fetchCustomers';
+import { getCustomers } from './../selectors/customers';
 
 class CustomersContainer extends Component {
 
@@ -22,7 +23,7 @@ class CustomersContainer extends Component {
         <div>
             <CustomersList 
                 customers={customers} 
-                urlPath={'customer/'}>
+                urlPath={'customers/'}>
             </CustomersList>
             <CustomersActions>
                 <button onClick={this.handleAddNew}>Nuevo Cliente</button>
@@ -48,28 +49,11 @@ CustomersContainer.propTypes = {
 };
 
 CustomersContainer.defaultProps = {
-    customers: [
-        {
-            'dni': '2399009748',
-            'name': 'Pepe Perez',
-            'age': 34,
-        },
-        {
-            'dni': '2390078000',
-            'name': 'Marco Perez',
-            'age': 33,
-        },
-        {
-            'dni': '2399976908',
-            'name': 'Jesus Colmenares',
-            'age': 31,
-        },
-        {
-            'dni': '2399008598',
-            'name': 'Santos',
-            'age': 26,
-        },
-    ]
+    customers: [ ]
 }
 
-export default withRouter(connect(null, {fetchCustomers})(CustomersContainer));
+const mapStateToProps = state => ({
+    customers: getCustomers(state),
+});
+
+export default withRouter(connect(mapStateToProps, {fetchCustomers})(CustomersContainer));

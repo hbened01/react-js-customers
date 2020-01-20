@@ -1,0 +1,41 @@
+{
+    "posts": [
+        {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+        }
+    ],
+    "comments": [
+        {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }, 
+    "customers": [
+        {
+            "dni": "2399009748",
+            "name": "Pepe Perez",
+            "age": 34
+        },
+        {
+            "dni": "2390078000",
+            "name": "Marco Perez",
+            "age": 33
+        },
+        {
+            "dni": "2399976908",
+            "name": "Jesus Colmenares",
+            "age": 31
+        },
+        {
+            "dni": "2399008598",
+            "name": "Santos",
+            "age": 26
+        }
+    ]
+}

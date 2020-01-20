@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function CustomerData({name, dni, age}) {
+function CustomerData({ name, dni, age }) {
     return (
         <div>
             <div className="customer-data">
@@ -20,4 +20,4 @@ CustomerData.propTypes = {
     age:PropTypes.number,
 }
 
-export default CustomerData
+export default CustomerData;

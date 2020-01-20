@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppHeader from './AppHeader';
-const AppFrame = ({header, body }) => {
-    const footer = 'aplicacion simple de ReactJs';
+
+const AppFrame = ({header, body}) => {
     return (
         <div>
-            <div className="app-header">
-                <AppHeader>{header}</AppHeader>
+            <div className="app-frame">
+                <AppHeader title={header}></AppHeader>
                 <div>{body}</div>
-                <div>{footer}</div>
+                <div><p>Aplicación Simple de Ejemplo</p></div>
             </div>
         </div>
     );
